@@ -20,6 +20,17 @@ public class LambdaExercises {
 
         anonymusClassReference.silnoreki();
 
+        // wrong -> BoysDontCry stupid = new String("")
+        BoysDontCry firstLambda = () -> {};
+
+        BoysDontCry secondLambda = () -> System.out.println("Lambda ;)");
+        secondLambda.silnoreki();
+        BoysDontCry thirdLambda = () -> {
+            System.out.println("one");
+            System.out.println("second");
+        };
+
+
 
     }
 }
