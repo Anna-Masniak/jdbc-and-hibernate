@@ -8,5 +8,18 @@ public class LambdaExercises {
 
         ChlopakiNiePlacza boy2 = new ChlopakiNiePlacza();
         boy2.sing();
+
+
+        //anonymus class
+        BoysDontCry anonymusClassReference = new BoysDontCry() {
+            @Override
+            public void silnoreki() {
+                System.out.println("Anonimowy silnoreki :)");
+            }
+        } ;
+
+        anonymusClassReference.silnoreki();
+
+
     }
 }
