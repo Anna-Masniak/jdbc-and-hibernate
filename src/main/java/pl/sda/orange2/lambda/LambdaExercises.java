@@ -30,7 +30,24 @@ public class LambdaExercises {
             System.out.println("second");
         };
 
+        // () parenthesis - arguments list
+        // -> arguments, body separator
+        //
 
+        System.out.println("____________________");
+        System.out.println("Coffe time");
 
+        CoffeMaker myCoffeMaker = (int water, String coffeType) -> "my coffe";
+        CoffeMaker myCoffeMaker2 = (int water, String coffeType) ->  {
+            return "my coffe";
+        };
+
+        CoffeMaker myCoffeMaker3 = (int water, String coffeType) -> {
+            System.out.println("Coffe brewing....");
+            return "my coffe";
+        };
+
+        CoffeMaker shortVersion = (water, coffeType) -> "my coffe";
     }
+
 }
