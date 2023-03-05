@@ -5,7 +5,8 @@ package pl.sda.orange2.lambda;
 public interface BoysDontCry {
     void silnoreki();
 
-    default void cry(){} //mozna implementować, ale nie trzeba, nie robi sie z automatu
+    default void cry() {
+    } //mozna implementować, ale nie trzeba, nie robi sie z automatu
 
     // void cry(); - nie moze być drugiej metody,
     // bo lambda się wysypie

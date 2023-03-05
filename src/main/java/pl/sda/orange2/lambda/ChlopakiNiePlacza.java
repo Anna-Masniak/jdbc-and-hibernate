@@ -1,6 +1,6 @@
 package pl.sda.orange2.lambda;
 
-public class ChlopakiNiePlacza implements BoysDontCry{
+public class ChlopakiNiePlacza implements BoysDontCry {
 
     @Override
     public void silnoreki() {

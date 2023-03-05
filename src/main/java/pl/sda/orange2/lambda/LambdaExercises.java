@@ -4,7 +4,7 @@ public class LambdaExercises {
     public static void main(String[] args) {
         BoysDontCry boy = new ChlopakiNiePlacza();
         boy.silnoreki();
-       // boy.sing();
+        // boy.sing();
 
         ChlopakiNiePlacza boy2 = new ChlopakiNiePlacza();
         boy2.sing();
@@ -16,12 +16,13 @@ public class LambdaExercises {
             public void silnoreki() {
                 System.out.println("Anonimowy silnoreki :)");
             }
-        } ;
+        };
 
         anonymusClassReference.silnoreki();
 
         // wrong -> BoysDontCry stupid = new String("")
-        BoysDontCry firstLambda = () -> {};
+        BoysDontCry firstLambda = () -> {
+        };
 
         BoysDontCry secondLambda = () -> System.out.println("Lambda ;)");
         secondLambda.silnoreki();
@@ -38,7 +39,7 @@ public class LambdaExercises {
         System.out.println("Coffe time");
 
         CoffeMaker myCoffeMaker = (int water, String coffeType) -> "my coffe";
-        CoffeMaker myCoffeMaker2 = (int water, String coffeType) ->  {
+        CoffeMaker myCoffeMaker2 = (int water, String coffeType) -> {
             return "my coffe";
         };
 
@@ -47,7 +48,7 @@ public class LambdaExercises {
             return "Java Latte";
         };
 
-        String myCoffe = myCoffeMaker3.prepare(5,"Small");
+        String myCoffe = myCoffeMaker3.prepare(5, "Small");
         System.out.println("my coffe is ready: " + myCoffe);
 
         CoffeMaker shortVersion = (water, coffeType) -> "my coffe";
