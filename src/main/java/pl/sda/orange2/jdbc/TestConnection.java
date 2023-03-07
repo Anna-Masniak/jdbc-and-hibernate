@@ -12,7 +12,9 @@ public class TestConnection {
                 SELECT ID, NAME
                 FROM TEST
                 """;
-       try{
+        Statement queryStatement = null;
+
+        try{
            //var zeby nie trzeba było pisać nazwy typu zmiennej, w tym przypadku jeśli nie byłoby var
            // wpisałabym connection
            // we need jdbc driver (h2 dependency at pom)
@@ -23,7 +25,7 @@ public class TestConnection {
            System.out.println("got connection: " + (h2Connection != null));
 
            // Statement is used to send queries to db with existing connection
-           Statement queryStatement = h2Connection.createStatement();
+           queryStatement = h2Connection.createStatement();
 
            //ResultSet contains query result data as simple table
            // we need to iterate over result to got data
@@ -35,9 +37,17 @@ public class TestConnection {
            } catch (SQLException exc) {
            System.out.println("got exeption: " + exc);
            exc.printStackTrace();
-
-
+       } finally {
+           System.out.println("Finally I know it:)");
+          if(queryStatement != null){
+              try {
+                  queryStatement.close();
+              } catch (SQLException e) {
+                  throw new RuntimeException(e);
+              }
+          }
 
        }
+        System.out.println("The end");
     }
 }
