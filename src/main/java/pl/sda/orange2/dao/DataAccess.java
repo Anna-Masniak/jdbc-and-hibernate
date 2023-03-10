@@ -1,6 +1,6 @@
 package pl.sda.orange2.dao;
 
-//import pl.sda.orange2.entity.Car;
+import pl.sda.orange2.entity.Car;
 
 import java.util.List;
 
